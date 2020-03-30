@@ -23,19 +23,23 @@ class Pokemon {
         $this->resistance = $resistance;
     }
 
-	function setName($newName) {
-		$this->$name = newName;
-	}
-
 	function GetName() {
 		return $this->name;
 	}
-	function GetHitpoints() {
-		$this->hitpoints;
+	function GetType() {
+		return $this->energytype;
+	}
+	function GetHealth() {
+		return $this->health;
+	}
+	function GetAttackName($attackNumber){
+		return $this->attacks[$attackNumber]->GetName();
 	}
 	function GetAttackPower($attackNumber){
-		$attack = $this->attacks[$attackNumber];
+		return $this->attacks[$attackNumber]->GetPower();
 	}
+
+
 	function Attack($targetPokemon, $attackNumber) {
 		$attack = $this->attacks[$attackNumber];
 		$power - $attack->GetAttackPower();
