@@ -1,5 +1,4 @@
 <?
-require 'Moves.php';
 
 $pikachu = new Pokemon('Electric Rat', 
                        'Electric', 

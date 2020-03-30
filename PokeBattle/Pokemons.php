@@ -24,14 +24,14 @@ class Pokemon {
     }
 
 	function setName($newName) {
-		$this->$name = $newName;
+		$this->$name = newName;
 	}
 
 	function GetName() {
-		return $this->$name;
+		return $this->name;
 	}
 	function GetHitpoints() {
-		$this->$hitpoints;
+		$this->hitpoints;
 	}
 	function GetAttackPower($attackNumber){
 		$attack = $this->attacks[$attackNumber];

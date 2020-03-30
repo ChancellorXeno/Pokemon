@@ -1,5 +1,4 @@
 <?
-class Charmeleon extends Pokemon{
 
 $charmeleon = new Pokemon('Charcoal Melon', 
                           'Fire',
@@ -7,6 +6,5 @@ $charmeleon = new Pokemon('Charcoal Melon',
                           [new Move('Head Butt', 10, 'Normal'), new Move('Flare', 30, 'Fire')], 
                           ['Water', 2], 
                           ['Fighting', 20]);
-}
 
 ?>

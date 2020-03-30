@@ -1,6 +1,6 @@
 <?
-require 'Pokemons.php';
 require 'Moves.php';
+require 'Pokemons.php';
 
 ?>
 <!DOCTYPE html>
