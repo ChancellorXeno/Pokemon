@@ -1,5 +1,5 @@
 <?
-	require 
+	require 'Pikachu.php';
 
 class Pokemon {
 
@@ -8,7 +8,7 @@ class Pokemon {
 	public $name;
 	public $energytype;
 	public $hitpoints;
-	private $health
+	public $health;
 	public $attacks;
 	public $weakness;
 	public $resistance;
@@ -28,17 +28,17 @@ class Pokemon {
 	}
 
 	function GetName() {
-		return this->$name;
+		return $this->$name;
 	}
 	function GetHitpoints() {
-		this->$hitpoints;
+		$this->$hitpoints;
 	}
 	function GetAttackPower($attackNumber){
-		$attack = $this->attacks[$attac]
+		$attack = $this->attacks[$attackNumber];
 	}
 	function Attack($targetPokemon, $attackNumber) {
 		$attack = $this->attacks[$attackNumber];
-		$power - $attack->GetPower();
+		$power - $attack->GetAttackPower();
 
 		$targetHealth = $targetPokemon->GetHealth();
 		$targetPokemon->SetHealth($targetHealth - $power);

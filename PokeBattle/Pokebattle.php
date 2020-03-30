@@ -1,8 +1,6 @@
 <?
-require Pokemons.php;
-require Moves.php
-
-$charmeleon = new Pokemon('Charcoal Melon', 'Fire', 80, [new Move('Head Butt', 10, 'Normal'), new Move('Flare', 30, 'Fire')], ['Water', 2] ['Fighting', 20]);
+require 'Pokemons.php';
+require 'Moves.php';
 
 ?>
 <!DOCTYPE html>
@@ -14,7 +12,8 @@ $charmeleon = new Pokemon('Charcoal Melon', 'Fire', 80, [new Move('Head Butt', 1
 </head>
 <body>
     <p><?= $pikachu->GetName(); ?></p>
-    <p><?= $pikachu->GetHitpoints(); ?></p>
-    <p><?= $pikachu->GetAttackPower(); ?></p>
+    <p>HP: <?= $pikachu->GetHitpoints(); ?></p>
+    <p>Electric Ring: <?= $pikachu->GetAttackPower(0); ?></p>
+    <p>Non existant move: <?= $pikachu->GetAttackPower(1); ?></p>
 </body>
 </html>
