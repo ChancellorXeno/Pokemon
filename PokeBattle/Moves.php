@@ -2,9 +2,9 @@
 
 class Move {
 
-    private $name;
-    private $power;
-    private $type;
+    public $name;
+    public $power;
+    public $type;
 
     public function __construct($name, $power, $type) {
         $this->name = $name;
@@ -21,7 +21,6 @@ class Move {
     public function GetType(){
         return $this->type;
     }
-
     public function __toString() {
         return json_encode($this);
     }

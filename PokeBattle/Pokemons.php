@@ -1,5 +1,4 @@
 <?
-	require 'Pikachu.php';
 
 class Pokemon {
 
@@ -9,16 +8,16 @@ class Pokemon {
 	public $energytype;
 	public $hitpoints;
 	public $health;
-	public $attacks;
+	public $attack;
 	public $weakness;
 	public $resistance;
 
-	public function __construct($name, $energytype, $hitpoints, $attacks, $weakness, $resistance) {
+	public function __construct($name, $energytype, $hitpoints, $attack, $weakness, $resistance) {
         $this->name = $name;
         $this->energytype = $energytype;
 		$this->hitpoints = $hitpoints;
 		$this->health = $hitpoints;
-        $this->attacks = $attacks;
+        $this->attack = $attack;
         $this->weakness = $weakness;
         $this->resistance = $resistance;
     }
@@ -33,20 +32,20 @@ class Pokemon {
 		return $this->health;
 	}
 	function GetAttackName($attackNumber){
-		return $this->attacks[$attackNumber]->GetName();
+		return $this->attack[$attackNumber]->GetName();
 	}
-	function GetAttackPower($attackNumber){
-		return $this->attacks[$attackNumber]->GetPower();
+	function GetAttackDamage($attackNumber){
+		return $this->attack[$attackNumber]->GetPower();
 	}
 
 
-	function Attack($targetPokemon, $attackNumber) {
-		$attack = $this->attacks[$attackNumber];
-		$power - $attack->GetAttackPower();
+	// function Attack($target, $attackNumber) {
+	// 	$damage = $this->attack[$attackNumber];
+	// 	$power = $damage->GetAttackPower();
 
-		$targetHealth = $targetPokemon->GetHealth();
-		$targetPokemon->SetHealth($targetHealth - $power);
-	}
+	// 	$targetHealth = $target->GetHealth();
+	// 	$target->SetHealth($targetHealth - $power);
+	// }
 
 
 	public function __toString() {
