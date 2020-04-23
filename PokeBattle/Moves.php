@@ -2,9 +2,9 @@
 
 class Move {
 
-    public $name;
-    public $power;
-    public $type;
+    protected $name;
+    protected $power;
+    protected $type;
 
     public function __construct($name, $power, $type) {
         $this->name = $name;
